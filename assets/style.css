@@ -85,7 +85,7 @@ a:hover, a:active {
   text-decoration: underline;
 }
 ::selection {
-  background-color: #99d8ff;
+  background-color: #66cfff;
   color: var(--background-secondary);
 }
 ul {
