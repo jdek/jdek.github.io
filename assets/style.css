@@ -17,6 +17,21 @@
   }
 }
 
+h1#title {
+  text-align: center;
+  font-size: 3em;
+}
+
+@media (orientation: landscape) {
+  body {
+      margin-left: 15%;
+      margin-right: 15%;
+  }
+  h1#title {
+    font-size: 5em;
+  }
+}
+
 body {
   padding-top: 20px;
   background-color: var(--background);
@@ -30,11 +45,6 @@ body {
 .breadcrumb {
   margin-top:1em;
   margin-bottom:1em;
-}
-.container {
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 0 20px;
 }
 code {
   /*border: var(--foreground-secondary) solid 0.5px;*/
@@ -106,10 +116,6 @@ b {
 i, em {
   font-style: italic;
 }
-h1#title {
-  text-align: center;
-  font-size: calc(2em + 3vw)
-}
 cite:before {
   content: "\2014\20";
 }
@@ -123,20 +129,6 @@ blockquote.quote:before, blockquote.quote:after {
 blockquote {
   margin: 1em 0;
   text-align: center;
-}
-.container {
-}
-nav {
-  margin: 1em 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-around;
-  align-items: center;
-}
-nav > a {
-  margin: auto;
 }
 div.footer {
   width: 20vw;
