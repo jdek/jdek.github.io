@@ -16,76 +16,37 @@
     --foreground-secondary: #cacaca;
   }
 }
-
-h1#title {
-  text-align: center;
-  font-size: 3em;
-}
-
-@media (orientation: landscape) {
-  body {
-      margin-left: 15%;
-      margin-right: 15%;
-  }
-  h1#title {
-    font-size: 5em;
-  }
-}
-
 body {
-  padding-top: 20px;
-  background-color: var(--background);
-  color: var(--foreground);
   /* font-family: serif; */
   font-family: monospace;
   font-size: 16px;
   line-height: 1.3;
   letter-spacing: 0.02em;
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 1em;
+  padding-top: 20px;
 }
-.breadcrumb {
-  margin-top:1em;
-  margin-bottom:1em;
-}
-code {
-  /*border: var(--foreground-secondary) solid 0.5px;*/
-  margin: 0 1px;
-  padding: 4px;
-  word-break: break-all;
-  display: inline-block;
-  font-family: monospace;
-  background-color: var(--background-secondary);
-  /*font-size: 0.8em;*/
-}
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-pre > code {
-  width: 100%;
+@media (orientation: landscape) {
+  body {
+    max-width: 650px;
+    margin: 0 auto;
+  }
 }
 p {
   margin: 1em 0;
+}
+::selection {
+  color: var(--background-secondary);
+  background-color: #66cfff;
 }
 h1, h2, h3 {
   line-height: 1.1;
 }
 h1, h2, h3, h4, h5 {
   color: var(--foreground-secondary);
-  /* font-variant: small-caps; */
   font-weight: bold;
   margin: 0.8em 0;
-}
-h1 {
-  font-size: 2em;
-}
-h2 {
-  font-size: 1.5em;
-}
-h3 {
-  font-size: 1.2em;
-}
-h4 {
-  font-size: 1em;
 }
 a, a:visited {
   color: #33b1ff;
@@ -94,27 +55,41 @@ a, a:visited {
 a:hover, a:active {
   text-decoration: underline;
 }
-::selection {
-  background-color: #66cfff;
-  color: var(--background-secondary);
+img {
+  max-width: 100%;
 }
 ul {
-  list-style-type: disc;
+  list-style-type: "- ";
+  padding-inline-start: 1em;
 }
 ol {
   list-style-type: decimal;
+  padding-inline-start: 1.5em;
 }
-ul, ol {
-  padding-inline-start: 2.5em;
+table {
+  border-collapse: collapse;
+  margin: 0 -1em; /* XXX: hack to avoid extra padding around table */
 }
-dd {
-  margin-left: 2.5em;
+td {
+  padding: 0 1em;
 }
-b {
-  font-weight: bold;
+code {
+  box-sizing: border-box;
+  margin: 0 1px;
+  padding: 4px;
+  word-break: break-all;
+  display: inline-block;
+  font-family: monospace;
+  background-color: var(--background-secondary);
 }
-i, em {
-  font-style: italic;
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre > code {
+  width: 100%;
+  display: block;
 }
 cite:before {
   content: "\2014\20";
@@ -136,10 +111,4 @@ div.footer {
   right: 0px;
   bottom: -5px;
   z-index: -1;
-}
-img {
-  max-width: 100%;
-}
-table {
-  border-collapse: collapse;
 }
